@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "WalletManager",
+  "name": "WalletManager by KN",
+  "description":"An application to manage your wallet money amount.",
   "icons": [
     {
       "src": "favicon.ico",
