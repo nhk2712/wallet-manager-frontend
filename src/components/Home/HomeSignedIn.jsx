@@ -1,6 +1,6 @@
 function HomeSignedIn({ userId }) {
     return (<>
-        <div className="container">
+        <div className="container home">
             <div className="title">Welcome, John Doe</div>
             <div className="amount">
                 <div className="amountTitle">Your money amount:</div>

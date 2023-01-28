@@ -3,7 +3,7 @@
 @media all and (max-width:768px) {
 
     /* Mobiles and tablets */
-    .container {
+    .container.home {
         margin-top: 100px;
     }
 
@@ -32,7 +32,7 @@
 @media all and (min-width:768px) {
 
     /* Laptops and PCs */
-    .container {
+    .container.home {
         margin-top: 100px;
     }
 
@@ -104,4 +104,9 @@
 
 .amount {
     font-family: 'Nunito', sans-serif;
+}
+
+.link{
+    color:inherit;
+    text-decoration: inherit;
 }

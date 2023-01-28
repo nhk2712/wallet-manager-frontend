@@ -1,5 +1,6 @@
 import HomeNotSignedIn from './HomeNotSignedIn';
 import HomeSignedIn from "./HomeSignedIn";
+import "./Home.css";
 
 function Home({ userId }) {
     return (<>
