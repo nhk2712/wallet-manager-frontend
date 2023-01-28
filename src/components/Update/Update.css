@@ -1,0 +1,39 @@
+textarea {
+    width: 226.8px;
+}
+
+.typeChosen {
+    font-family: 'Nunito', sans-serif;
+    margin:10px 0px 10px 0px;
+}
+
+.updateBtn {
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    padding: 5px 10px 5px 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    margin: 0px 10px 0px 10px;
+}
+
+.updateBtn:hover {
+    transform: scale(0.9);
+}
+
+.updateBtn.add {
+    background-color: green;
+    border-color: green;
+}
+
+.updateBtn.omit {
+    background-color: red;
+    border-color: red;
+}
+
+.signin-button.update {
+    background-color: rgb(68, 68, 234);
+    border-color: rgb(68, 68, 234);
+}

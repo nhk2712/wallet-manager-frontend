@@ -9,7 +9,7 @@ import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 
 function App() {
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState("123456");
 
   return (
     <BrowserRouter>
@@ -18,8 +18,8 @@ function App() {
 
           <Route index element={<Home userId={userId} />} />
 
-          <Route path="update" element={<Update />} />
-          <Route path="preference" element={<Preferences />} />
+          <Route path="update" element={<Update userId={userId} />} />
+          <Route path="preferences" element={<Preferences userId={userId} />} />
           <Route path="signin" element={<SignIn />} />
           <Route path="signup" element={<SignUp />} />
 
