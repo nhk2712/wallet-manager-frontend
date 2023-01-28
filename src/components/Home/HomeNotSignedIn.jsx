@@ -5,8 +5,8 @@ function HomeNotSignedIn(){
     <div className="container">
         <div className="title">Welcome to WalletManager!</div>
         <div className="buttons-holder">
-            <button className="button in">Sign in</button>
-            <button className="button up">Sign up</button>
+            <button className="button moreImportant">Sign in</button>
+            <button className="button lessImportant">Sign up</button>
         </div>
     </div>
 
