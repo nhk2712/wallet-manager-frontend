@@ -4,7 +4,7 @@ textarea {
 
 .typeChosen {
     font-family: 'Nunito', sans-serif;
-    margin:10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
 }
 
 .updateBtn {
@@ -36,4 +36,14 @@ textarea {
 .signin-button.update {
     background-color: rgb(68, 68, 234);
     border-color: rgb(68, 68, 234);
+}
+
+.update-notify {
+    font-family: 'Nunito', sans-serif;
+    color:red;
+}
+
+.update-loading{
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
 }
