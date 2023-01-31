@@ -1,0 +1,45 @@
+.preferences-heading{
+    font-size:30px;
+}
+
+.container-signin.preferences{
+    font-family: 'Nunito',sans-serif;
+}
+
+.history-div{
+    background-color: rgb(241, 241, 241);
+    margin:10px 0px 10px 0px;
+    padding:5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.history-label{
+    font-weight: bold;
+    padding-right:10px;
+}
+
+.history-li{
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+
+.history-ul{
+    padding:0px;
+}
+
+@media all and (min-width:768px){
+    .history-ul{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    .history-div{
+        margin: 10px;
+        width:500px;
+    }
+}
+
+tr{
+    vertical-align: top;
+}
