@@ -56,7 +56,7 @@ function Update({ userId }) {
         <div className="container-signin">
             <div className="title-signin">Update</div>
 
-            {(!submitted) ? <UpdateForm type={type} setType={setType} setDeltaAmount={setDeltaAmount} setTitle={setTitle} setDescription={setDescription} notify={notify} updateRequest={updateRequest} />
+            {(!submitted) ? <UpdateForm type={type} setType={setType} setDeltaAmount={setDeltaAmount} setTitle={setTitle} setDescription={setDescription} notify={notify} updateRequest={updateRequest} setNotify={setNotify} />
                 : (loading) ? <div className="update-loading">Your request is being processed...</div>
                     : <UpdateResult result={result} />
             }

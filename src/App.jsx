@@ -9,26 +9,26 @@ import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 
 function App() {
-  const [userId, setUserId] = useState("123456");
+    const [userId, setUserId] = useState(localStorage.getItem("userId"));
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/">
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/">
 
-          <Route index element={<Home userId={userId} />} />
+                    <Route index element={<Home userId={userId} />} />
 
-          <Route path="update" element={<Update userId={userId} />} />
-          <Route path="preferences" element={<Preferences userId={userId} />} />
-          <Route path="signin" element={<SignIn />} />
-          <Route path="signup" element={<SignUp />} />
+                    <Route path="update" element={<Update userId={userId} />} />
+                    <Route path="preferences" element={<Preferences userId={userId} />} />
+                    <Route path="signin" element={<SignIn />} />
+                    <Route path="signup" element={<SignUp />} />
 
-          <Route path="*" element={<NotFound />} />
+                    <Route path="*" element={<NotFound />} />
 
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

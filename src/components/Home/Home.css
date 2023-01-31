@@ -14,7 +14,7 @@
 
     .button {
         font-size: 30px;
-        margin: 5px 10px 0px 10px;
+        margin: 10px 10px 10px 10px;
         padding: 10px 20px 10px 20px;
         border-radius: 10px;
     }
@@ -26,6 +26,11 @@
     .amountNumber{
         font-size:40px;
         font-weight: 600;
+    }
+
+    .buttons-holder{
+        display:flex;
+        flex-direction: column;
     }
 }
 
@@ -109,4 +114,13 @@
 .link{
     color:inherit;
     text-decoration: inherit;
+}
+
+.container.home.signedin{
+    animation:none;
+}
+
+.button.lessImportant.danger{
+    border-color: red;
+    color:red;
 }

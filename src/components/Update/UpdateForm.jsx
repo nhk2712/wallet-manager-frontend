@@ -1,20 +1,20 @@
-function UpdateForm({type,setType,setDeltaAmount,setTitle,setDescription,notify,updateRequest}){
+function UpdateForm({type,setType,setDeltaAmount,setTitle,setDescription,notify,updateRequest,setNotify}){
     return (<>
     <div className="signin-form">
                 <div>
                     <label className="signin-label field">Type:</label>
-                    <button className="updateBtn add" onClick={() => { setType("add") }}>Add</button>
-                    <button className="updateBtn omit" onClick={() => { setType("omit") }}>Omit</button>
+                    <button className="updateBtn add" onClick={() => { setType("add");setNotify("") }}>Add</button>
+                    <button className="updateBtn omit" onClick={() => { setType("omit");setNotify("") }}>Omit</button>
                     <div className="typeChosen">{(type) ? "You are currently want to: " + type : "Please choose an update type."}</div>
                     <table><tbody>
 
                         <tr>
                             <td><label className="signin-label field">Amount:</label></td>
-                            <td><input type="number" placeholder="0" onChange={(e) => { setDeltaAmount(e.target.value) }} /></td>
+                            <td><input type="number" placeholder="0" onChange={(e) => { setDeltaAmount(e.target.value);setNotify("") }} /></td>
                         </tr>
                         <tr>
                             <td><label className="signin-label field">Title:</label></td>
-                            <td><input type="text" placeholder="title" onChange={(e) => { setTitle(e.target.value) }} /></td>
+                            <td><input type="text" placeholder="title" onChange={(e) => { setTitle(e.target.value);setNotify("") }} /></td>
                         </tr>
                         <tr>
                             <td><label className="signin-label field">Description:</label></td>

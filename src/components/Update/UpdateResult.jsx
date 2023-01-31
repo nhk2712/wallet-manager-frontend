@@ -8,13 +8,13 @@ function UpdateResult({ result }) {
                     <>
                         You have successfully update your wallet!
                         <br />
-                        Your amount is now <b>{result.result.amount} {result.result.unit.toUpperCase()}</b>.
+                        Your amount is now <b>{result.result.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} {result.result.unit.toUpperCase()}</b>.
                     </>
                     : (result.description === "Money not enough") ?
                         <>
                             You do not have enough money to omit!
                             <br />
-                            Your amount is only <b>{result.result.amount} {result.result.unit.toUpperCase()}</b>.
+                            Your amount is only <b>{result.result.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} {result.result.unit.toUpperCase()}</b>.
                         </>
                         :
                         <>

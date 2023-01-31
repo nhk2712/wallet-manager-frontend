@@ -10,7 +10,7 @@ function HomeSignedIn({ userId }) {
         .then(data => setUser(data))
 
     return (<>
-        <div className="container home">
+        <div className="container home signedin">
             {(!user) ? <div className="title">Loading...</div> : <HomeSignedInLoaded user={user} />}
         </div>
     </>)
