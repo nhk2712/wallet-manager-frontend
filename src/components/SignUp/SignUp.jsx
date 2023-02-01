@@ -12,23 +12,25 @@ function SignUp() {
     const [unit, setUnit] = useState("");
     const [notify, setNotify] = useState("");
 
-    function signUpRequest() {
+    function checkUsernameExist() {
         if (username === "") {
             setNotify("Please enter your username!")
             return
         }
 
         setNotify(<span style={{ color: 'black' }}>Loading...</span>)
+
         const checkUsernameUrl = process.env.REACT_APP_BACKEND + `user/checkusername/${username}`;
-        var isUsernameExist;
+
         fetch(checkUsernameUrl)
             .then(res => res.json())
-            .then(data => { isUsernameExist = data.result })
-        if (isUsernameExist === "Exist") {
-            setNotify("Username already exists!")
-            return
-        }
+            .then(data => { 
+                if (data.result==="Okay") signUpRequest()
+                else setNotify("Username already exists!")
+            })
+    }
 
+    function signUpRequest() {
         if (password === "") {
             setNotify("Please enter your password!")
             return
@@ -59,14 +61,14 @@ function SignUp() {
 
         const URL = process.env.REACT_APP_BACKEND + `user/signup/${username}/${hashedPassword}/${name}/${initialAmount}/${unit}`;
         fetch(URL)
-        .then(res=>res.json())
-        .then(data=>{
-            localStorage.setItem('userId',data.result._id)
-            window.location.href="/"
-        })
+            .then(res => res.json())
+            .then(data => {
+                localStorage.setItem('userId', data.result._id)
+                window.location.href = "/"
+            })
     }
 
-    document.addEventListener('keyup', (e) => { if (e.key === "Enter") signUpRequest() })
+    document.addEventListener('keyup', (e) => { if (e.key === "Enter") checkUsernameExist() })
 
     return (<>
         <div className="container-signin">
@@ -116,7 +118,7 @@ function SignUp() {
                     </tbody></table>
                     <div className="update-notify">{notify}</div>
                 </div>
-                <button className="signin-button" onClick={signUpRequest}>Sign up</button>
+                <button className="signin-button" onClick={checkUsernameExist}>Sign up</button>
             </div>
         </div>
     </>)
